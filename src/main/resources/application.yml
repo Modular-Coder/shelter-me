@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: shelter_me
+        jdbc:
+          lob:
+            non_contextual_creation: true

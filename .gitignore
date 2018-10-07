@@ -7,3 +7,5 @@
 *.ipr
 /out/
 
+### Properties ###
+application-local.yml

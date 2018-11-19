@@ -1,20 +1,40 @@
 package com.dake.shelterme.data;
 
-
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
 @Entity
 public class Shelter {
     @Id
-    private final String shelterId;
-    private final String shelterName;
+    String guid;
+    String name;
+    String street;
+    String city;
+    String state;
+    String zip;
+    String phone;
+    String email;
+    String notes;
+    int totalCapacity;
+    int availableCapacity;
+    String type;
+    String county;
+    boolean hasBed;
+    boolean hasFood;
+    boolean hasFirstAid;
+    boolean hasMentalServices;
+    boolean hasElderlyServices;
+    boolean hasReconnectionAssistance;
+    boolean hasInformationAboutOtherResources;
+    boolean hasChildCare;
+    boolean hasElectricity;
+    boolean hasLaundry;
+    boolean allowsPets;
+    String itemsToBring;
+    String rules;
+    boolean isOpen;
+    boolean isActive;
 }

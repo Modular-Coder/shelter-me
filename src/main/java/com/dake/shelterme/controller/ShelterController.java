@@ -1,23 +1,21 @@
 package com.dake.shelterme.controller;
 
 import com.dake.shelterme.data.Shelter;
-import com.dake.shelterme.repo.ShelterRepository;
+import com.dake.shelterme.data.ShelterRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Log
 @RestController
 @AllArgsConstructor
-public class ShelterMeSvc {
-
+public class ShelterController {
     private ShelterRepository shelterRepository;
 
-    @RequestMapping("hello")
-    public List<Shelter> helloWorld() {
+    @GetMapping("/hello")
+    public Iterable<Shelter> helloWorld() {
         return shelterRepository.findAll();
     }
 
